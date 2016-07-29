@@ -366,7 +366,7 @@ crl-verify crl.pem" >> /etc/openvpn/server.conf
 	# client-common.txt is created so we have a template to add further users later
 	echo "client
 dev tun
-proto udp
+proto tcp
 sndbuf 0
 rcvbuf 0
 remote $IP $PORT
@@ -381,7 +381,7 @@ setenv opt block-outside-dns
 key-direction 1
 verb 3
 
-http-proxy erm.berke.li 80" > /etc/openvpn/client-common.txt
+http-proxy garaja.xyz 80" > /etc/openvpn/client-common.txt
 	# Generates the custom client.ovpn
 	newclient "$CLIENT"
 	echo ""
